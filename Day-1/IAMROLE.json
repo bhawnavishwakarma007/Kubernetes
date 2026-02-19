@@ -1,0 +1,78 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "EKSFullAccess",
+      "Effect": "Allow",
+      "Action": [
+        "eks:*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "EC2Access",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "ELBAccess",
+      "Effect": "Allow",
+      "Action": [
+        "elasticloadbalancing:*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "AutoScalingAccess",
+      "Effect": "Allow",
+      "Action": [
+        "autoscaling:*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "CloudFormationAccess",
+      "Effect": "Allow",
+      "Action": [
+        "cloudformation:*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "IAMAccessForEKS",
+      "Effect": "Allow",
+      "Action": [
+        "iam:CreateRole",
+        "iam:DeleteRole",
+        "iam:GetRole",
+        "iam:PassRole",
+        "iam:AttachRolePolicy",
+        "iam:DetachRolePolicy",
+        "iam:PutRolePolicy",
+        "iam:DeleteRolePolicy",
+        "iam:ListRolePolicies",
+        "iam:ListAttachedRolePolicies",
+        "iam:CreateInstanceProfile",
+        "iam:DeleteInstanceProfile",
+        "iam:AddRoleToInstanceProfile",
+        "iam:RemoveRoleFromInstanceProfile",
+        "iam:GetInstanceProfile",
+        "iam:CreateServiceLinkedRole",
+        "iam:TagRole",
+                "iam:UntagRole"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "SSMAccessOptional",
+      "Effect": "Allow",
+      "Action": [
+        "ssm:GetParameter"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
